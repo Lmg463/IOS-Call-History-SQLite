@@ -1,0 +1,7 @@
+SELECT
+datetime(ZCALLRECORD.zdate+978307200, 'unixepoch', 'localtime') AS "Date & Time (CST)",
+ZCALLRECORD.ZADDRESS AS 'Phone Number',
+ZCALLRECORD.ZDURATION AS 'Call Length',
+ZCALLRECORD.ZSERVICE_PROVIDER AS 'Call Type'
+from ZCALLRECORD
+order by ZCALLRECORD.zdate DESC
